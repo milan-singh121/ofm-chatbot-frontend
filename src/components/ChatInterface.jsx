@@ -57,8 +57,10 @@ const ChatInterface = () => {
     }));
     formData.append('history', JSON.stringify(historyForAPI));
 // 'http://127.0.0.1:8000/api/chat'
+// 'https://ofm-chatbot-backend.onrender.com'
+
     try {
-      const response = await fetch('https://ofm-chatbot-backend.onrender.com', {
+      const response = await fetch('https://ofm-chatbot-backend.onrender.com/api/chat', {
         method: 'POST',
         body: formData,
       });
